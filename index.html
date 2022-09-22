@@ -4,82 +4,70 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Link to Favicon -->
     <link rel="shortcut icon" type="image/png" href="img/icon.png" />
-
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap" rel="stylesheet" />
+    <!-- Link to my Stylesheet -->
     <link rel="stylesheet" href="style.css" />
+    <!-- Page Title -->
     <title>Bankist | When Banking meets Minimalist</title>
   </head>
   <body>
+
+    <!-- /.header -->
     <header class="header">
       <nav class="nav">
-        <img
-          src="img/logo.png"
-          alt="Bankist logo"
-          class="nav__logo"
-          id="logo"
-        />
+        <!-- /.nav__logo -->
+        <img src="img/logo.png" alt="Bankist logo" class="nav__logo" id="logo"/>
+        <!-- /.nav__links -->
         <ul class="nav__links">
-          <li class="nav__item">
-            <a class="nav__link" href="#section--1">Features</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#section--2">Operations</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#section--3">Testimonials</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link nav__link--btn btn--show-modal" href="#"
-              >Open account</a
-            >
-          </li>
+          <!-- /.nav__item -->
+          <li class="nav__item"><a class="nav__link" href="#section--1">Features</a></li>
+          <!-- /.nav__item -->
+          <li class="nav__item"><a class="nav__link" href="#section--2">Operations</a></li>
+          <!-- /.nav__item -->
+          <li class="nav__item"><a class="nav__link" href="#section--3">Testimonials</a></li>
+          <!-- /.nav__item -->
+          <li class="nav__item"><a class="nav__link nav__link--btn btn--show-modal" href="#">Open account</a></li>
         </ul>
       </nav>
-
+      <!-- /.header__title -->
       <div class="header__title">
-        <h1>
-          When
-          <!-- Green highlight effect -->
-          <span class="highlight">banking</span>
-          meets<br />
-          <span class="highlight">minimalist</span>
-        </h1>
+        <!-- Title -->
+        <h1> When <span class="highlight">banking</span> meets<br/><span class="highlight">minimalist</span></h1>
+        <!-- Subtitle -->
         <h4>A simpler banking experience for a simpler life.</h4>
+        <!-- /.btn--text .btn--scroll-to -->
         <button class="btn--text btn--scroll-to">Learn more &DownArrow;</button>
-        <img
-          src="img/hero.png"
-          class="header__img"
-          alt="Minimalist bank items"
-        />
+        <!-- /.header__img -->
+        <img src="img/hero.png" class="header__img" alt="Minimalist bank items"/>
       </div>
     </header>
 
+    <!-- /.section -->
     <section class="section" id="section--1">
+      <!-- /.section__title -->
       <div class="section__title">
+        <!-- /.section__description -->
         <h2 class="section__description">Features</h2>
-        <h3 class="section__header">
-          Everything you need in a modern bank and more.
-        </h3>
+        <!-- /.section__header -->
+        <h3 class="section__header">Everything you need in a modern bank and more.</h3>
       </div>
 
+      <!-- /.features -->
       <div class="features">
-        <img
-          src="img/digital-lazy.jpg"
-          data-src="img/digital.jpg"
-          alt="Computer"
-          class="features__img lazy-img"
-        />
+        <!-- /.features__img lazy-img -->
+        <img src="img/digital-lazy.jpg" data-src="img/digital.jpg" alt="Computer" class="features__img lazy-img" />
+        <!-- /.features__feature -->
         <div class="features__feature">
+          <!-- /.features__icon -->
           <div class="features__icon">
-            <svg>
-              <use xlink:href="img/icons.svg#icon-monitor"></use>
-            </svg>
+            <svg> <use xlink:href="img/icons.svg#icon-monitor"></use></svg>
           </div>
+          <!-- /.features__header -->
           <h5 class="features__header">100% digital bank</h5>
+          <!-- Paragraph -->
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde alias
             sint quos? Accusantium a fugiat porro reiciendis saepe quibusdam
@@ -87,39 +75,36 @@
           </p>
         </div>
 
+        <!-- /.features__feature -->
         <div class="features__feature">
+          <!-- /.features__icon -->
           <div class="features__icon">
-            <svg>
-              <use xlink:href="img/icons.svg#icon-trending-up"></use>
-            </svg>
+            <svg> <use xlink:href="img/icons.svg#icon-trending-up"></use></svg>
           </div>
+          <!-- /.features__header -->
           <h5 class="features__header">Watch your money grow</h5>
+          <!-- Paragraph -->
           <p>
             Nesciunt quos autem dolorum voluptates cum dolores dicta fuga
             inventore ab? Nulla incidunt eius numquam sequi iste pariatur
             quibusdam!
           </p>
         </div>
-        <img
-          src="img/grow-lazy.jpg"
-          data-src="img/grow.jpg"
-          alt="Plant"
-          class="features__img lazy-img"
-        />
 
-        <img
-          src="img/card-lazy.jpg"
-          data-src="img/card.jpg"
-          alt="Credit card"
-          class="features__img lazy-img"
-        />
+        <!-- /.features__img lazy-img -->
+        <img src="img/grow-lazy.jpg" data-src="img/grow.jpg" alt="Plant" class="features__img lazy-img"/>
+        <!-- /.features__img lazy-img -->
+        <img src="img/card-lazy.jpg" data-src="img/card.jpg" alt="Credit card" class="features__img lazy-img" />
+
+        <!-- /.features__feature -->
         <div class="features__feature">
+          <!-- /.features__icon -->
           <div class="features__icon">
-            <svg>
-              <use xlink:href="img/icons.svg#icon-credit-card"></use>
-            </svg>
+            <svg> <use xlink:href="img/icons.svg#icon-credit-card"></use></svg>
           </div>
+          <!-- /.features__header -->
           <h5 class="features__header">Free debit card included</h5>
+          <!-- Paragraph -->
           <p>
             Quasi, fugit in cumque cupiditate reprehenderit debitis animi enim
             eveniet consequatur odit quam quos possimus assumenda dicta fuga
@@ -129,40 +114,41 @@
       </div>
     </section>
 
+    <!-- /.section -->
     <section class="section" id="section--2">
+      <!-- /.section__title -->
       <div class="section__title">
+        <!-- /.section__description -->
         <h2 class="section__description">Operations</h2>
-        <h3 class="section__header">
-          Everything as simple as possible, but no simpler.
-        </h3>
+        <!-- /.section__header -->
+        <h3 class="section__header"> Everything as simple as possible, but no simpler.</h3>
       </div>
-
+      <!-- /.operations -->
       <div class="operations">
+        <!-- /.operations__tab-container -->
         <div class="operations__tab-container">
-          <button
-            class="btn operations__tab operations__tab--1 operations__tab--active"
-            data-tab="1"
-          >
+          <!-- /.btn operations__tab operations__tab--1 operations__tab--active -->
+          <button class="btn operations__tab operations__tab--1 operations__tab--active" data-tab="1">
             <span>01</span>Instant Transfers
           </button>
+          <!-- /.btn operations__tab operations__tab--2 -->
           <button class="btn operations__tab operations__tab--2" data-tab="2">
             <span>02</span>Instant Loans
           </button>
+          <!-- /.btn operations__tab operations__tab--3 -->
           <button class="btn operations__tab operations__tab--3" data-tab="3">
             <span>03</span>Instant Closing
           </button>
         </div>
-        <div
-          class="operations__content operations__content--1 operations__content--active"
-        >
+        <!-- /.operations__content operations__content--1 operations__content--active -->
+        <div class="operations__content operations__content--1 operations__content--active">
+          <!-- /.operations__icon operations__icon--1 -->
           <div class="operations__icon operations__icon--1">
-            <svg>
-              <use xlink:href="img/icons.svg#icon-upload"></use>
-            </svg>
+            <svg> <use xlink:href="img/icons.svg#icon-upload"></use></svg>
           </div>
-          <h5 class="operations__header">
-            Tranfser money to anyone, instantly! No fees, no BS.
-          </h5>
+          <!-- /.operations__header -->
+          <h5 class="operations__header"> Tranfser money to anyone, instantly! No fees, no BS.</h5>
+          <!-- Paragraph -->
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -170,16 +156,15 @@
             aliquip ex ea commodo consequat.
           </p>
         </div>
-
+        <!-- /.operations__content operations__content-- -->
         <div class="operations__content operations__content--2">
+          <!-- /.operations__icon operations__icon--2 -->
           <div class="operations__icon operations__icon--2">
-            <svg>
-              <use xlink:href="img/icons.svg#icon-home"></use>
-            </svg>
+            <svg><use xlink:href="img/icons.svg#icon-home"></use></svg>
           </div>
-          <h5 class="operations__header">
-            Buy a home or make your dreams come true, with instant loans.
-          </h5>
+          <!-- /.operations__header -->
+          <h5 class="operations__header"> Buy a home or make your dreams come true, with instant loans.</h5>
+          <!-- Paragraph -->
           <p>
             Duis aute irure dolor in reprehenderit in voluptate velit esse
             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
@@ -187,15 +172,15 @@
             anim id est laborum.
           </p>
         </div>
+        <!-- /.operations__content operations__content--3 -->
         <div class="operations__content operations__content--3">
+          <!-- /.operations__icon operations__icon--3 -->
           <div class="operations__icon operations__icon--3">
-            <svg>
-              <use xlink:href="img/icons.svg#icon-user-x"></use>
-            </svg>
+            <svg> <use xlink:href="img/icons.svg#icon-user-x"></use></svg>
           </div>
-          <h5 class="operations__header">
-            No longer need your account? No problem! Close it instantly.
-          </h5>
+          <!-- /.operations__header -->
+          <h5 class="operations__header"> No longer need your account? No problem! Close it instantly.</h5>
+          <!-- Paragraph -->
           <p>
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
             officia deserunt mollit anim id est laborum. Ut enim ad minim
@@ -206,18 +191,25 @@
       </div>
     </section>
 
+    <!-- /.section -->
     <section class="section" id="section--3">
+      <!-- /.section__title section__title--testimonials -->
       <div class="section__title section__title--testimonials">
+        <!-- /.section__description -->
         <h2 class="section__description">Not sure yet?</h2>
-        <h3 class="section__header">
-          Millions of Bankists are already making their lifes simpler.
-        </h3>
+        <!-- /.section__heade -->
+        <h3 class="section__header"> Millions of Bankists are already making their lifes simpler.</h3>
       </div>
 
+      <!-- /.slider -->
       <div class="slider">
+        <!-- /.slide slide--1 -->
         <div class="slide slide--1">
+          <!-- /.testimonial -->
           <div class="testimonial">
+            <!-- /.testimonial__header -->
             <h5 class="testimonial__header">Best financial decision ever!</h5>
+            <!-- /.testimonial__text -->
             <blockquote class="testimonial__text">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Accusantium quas quisquam non? Quas voluptate nulla minima
@@ -226,19 +218,24 @@
               id alias reiciendis, perferendis facere pariatur dolore veniam
               autem esse non voluptatem saepe provident nihil molestiae.
             </blockquote>
+            <!-- /.testimonial__author -->
             <address class="testimonial__author">
-              <img src="img/user-1.jpg" alt="" class="testimonial__photo" />
+              <!-- /.testimonial__photo -->
+              <img src="img/user-1.jpg" class="testimonial__photo" />
+              <!-- /.testimonial__name -->
               <h6 class="testimonial__name">Aarav Lynn</h6>
+              <!-- /.testimonial__location -->
               <p class="testimonial__location">San Francisco, USA</p>
             </address>
           </div>
         </div>
-
+        <!-- /.slide slide--2 -->
         <div class="slide slide--2">
+          <!-- /.testimonial -->
           <div class="testimonial">
-            <h5 class="testimonial__header">
-              The last step to becoming a complete minimalist
-            </h5>
+            <!-- /.testimonial__header -->
+            <h5 class="testimonial__header">The last step to becoming a complete minimalist</h5>
+            <!-- /.testimonial__text -->
             <blockquote class="testimonial__text">
               Quisquam itaque deserunt ullam, quia ea repellendus provident,
               ducimus neque ipsam modi voluptatibus doloremque, corrupti
@@ -246,19 +243,24 @@
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo
               deserunt exercitationem deleniti.
             </blockquote>
+            <!-- /.testimonial__author -->
             <address class="testimonial__author">
-              <img src="img/user-2.jpg" alt="" class="testimonial__photo" />
+              <!-- /.testimonial__photo -->
+              <img src="img/user-2.jpg" class="testimonial__photo" />
+              <!-- /.testimonial__name -->
               <h6 class="testimonial__name">Miyah Miles</h6>
+              <!-- /.testimonial__locatio -->
               <p class="testimonial__location">London, UK</p>
             </address>
           </div>
         </div>
-
+        <!-- /.slide slide--3 -->
         <div class="slide slide--3">
+          <!-- /.testimonial -->
           <div class="testimonial">
-            <h5 class="testimonial__header">
-              Finally free from old-school banks
-            </h5>
+            <!-- /.testimonial__header -->
+            <h5 class="testimonial__header"> Finally free from old-school banks</h5>
+            <!-- /.testimonial__text -->
             <blockquote class="testimonial__text">
               Debitis, nihil sit minus suscipit magni aperiam vel tenetur
               incidunt commodi architecto numquam omnis nulla autem,
@@ -267,9 +269,13 @@
               deleniti saepe aliquid quos inventore sequi. Necessitatibus id
               alias reiciendis, perferendis facere.
             </blockquote>
+            <!-- /.testimonial__author -->
             <address class="testimonial__author">
-              <img src="img/user-3.jpg" alt="" class="testimonial__photo" />
+              <!-- /.testimonial__photo -->
+              <img src="img/user-3.jpg" class="testimonial__photo" />
+              <!-- /.testimonial__name -->
               <h6 class="testimonial__name">Francisco Gomes</h6>
+              <!-- /.testimonial__location -->
               <p class="testimonial__location">Lisbon, Portugal</p>
             </address>
           </div>
@@ -279,75 +285,74 @@
         <div class="slide"><img src="img/img-2.jpg" alt="Photo 2" /></div>
         <div class="slide"><img src="img/img-3.jpg" alt="Photo 3" /></div>
         <div class="slide"><img src="img/img-4.jpg" alt="Photo 4" /></div> -->
+        <!-- /.slider__btn slider__btn--left -->
         <button class="slider__btn slider__btn--left">&larr;</button>
+        <!-- /.slider__btn slider__btn--right -->
         <button class="slider__btn slider__btn--right">&rarr;</button>
+        <!-- /.dots -->
         <div class="dots"></div>
       </div>
     </section>
 
+    <!-- /.section section--sign-up -->
     <section class="section section--sign-up">
+      <!-- /.section__titl -->
       <div class="section__title">
-        <h3 class="section__header">
-          The best day to join Bankist was one year ago. The second best is
-          today!
-        </h3>
+        <!-- /.section__header -->
+        <h3 class="section__header"> The best day to join Bankist was one year ago. The second best is today!</h3>
       </div>
+      <!-- /.btn btn--show-modal -->
       <button class="btn btn--show-modal">Open your free account today!</button>
     </section>
 
+    <!-- /.footer -->
     <footer class="footer">
+      <!-- /.footer__nav -->
       <ul class="footer__nav">
-        <li class="footer__item">
-          <a class="footer__link" href="#">About</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="#">Pricing</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="#">Terms of Use</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="#">Privacy Policy</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="#">Careers</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="#">Blog</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="#">Contact Us</a>
-        </li>
+        <!-- /.footer_item -->
+        <li class="footer__item"> <a class="footer__link" href="#">About</a></li>
+        <!-- /.footer_item -->
+        <li class="footer__item"><a class="footer__link" href="#">Pricing</a></li>
+        <!-- /.footer_item -->
+        <li class="footer__item"><a class="footer__link" href="#">Terms of Use</a></li>
+        <!-- /.footer_item -->
+        <li class="footer__item"><a class="footer__link" href="#">Privacy Policy</a></li>
+        <!-- /.footer_item -->
+        <li class="footer__item"><a class="footer__link" href="#">Careers</a></li>
+        <!-- /.footer_item -->
+        <li class="footer__item"><a class="footer__link" href="#">Blog</a></li>
+        <!-- /.footer_item -->
+        <li class="footer__item"><a class="footer__link" href="#">Contact Us</a></li>
       </ul>
+      <!-- /.footer__logo -->
       <img src="img/icon.png" alt="Logo" class="footer__logo" />
-      <p class="footer__copyright">
-        &copy; Copyright by
-        <a
-          class="footer__link twitter-link"
-          target="_blank"
-          href="https://twitter.com/jonasschmedtman"
-          >Jonas Schmedtmann</a
-        >. Use for learning or your portfolio. Don't use to teach. Don't claim
-        as your own product.
-      </p>
     </footer>
 
+    <!-- /.modal hidden -->
     <div class="modal hidden">
+      <!-- /.btn--close-modal -->
       <button class="btn--close-modal">&times;</button>
-      <h2 class="modal__header">
-        Open your bank account <br />
+      <!-- /.modal__header -->
+      <h2 class="modal__header"> Open your bank account <br/>
         in just <span class="highlight">5 minutes</span>
       </h2>
+      <!-- /.modal__form -->
       <form class="modal__form">
+        <!-- First Name -->
         <label>First Name</label>
         <input type="text" />
+        <!-- Last Name -->
         <label>Last Name</label>
         <input type="text" />
+        <!-- Email Address -->
         <label>Email Address</label>
         <input type="email" />
+        <!-- /.btn -->
         <button class="btn">Next step &rarr;</button>
       </form>
     </div>
+
+    <!-- /.overlay hidden -->
     <div class="overlay hidden"></div>
 
     <script src="script.js"></script>
