@@ -98,6 +98,34 @@ document.addEventListener('keydown', function (e) {
 
 //#endregion 
 
+//#region Tabbed component
+const tabs = document.querySelectorAll('.operations__tab')
+const tabsContainer = document.querySelector('.operations__tab-container')
+const tabsContent = document.querySelectorAll('.operations__content')
+
+tabsContainer.addEventListener('click', (e) => {
+  // closest in modo che clicchi sempre sul button principale
+  // Anche se cliccassi sullo span 1/2/3
+  const clicked = e.target.closest('.operations__tab')
+  // console.log(clicked);
+  // Ignorare i click dove il result è none
+  // Per evitare l'errore
+  if (!clicked) return
+  // Rimuovo la classe active da tutti
+  tabs.forEach(tab => tab.classList.remove('operations__tab--active'))
+  // Per aggiungerla solo su quello cliccato
+  clicked.classList.add('operations__tab--active')
+
+  // Rimuovo la classe attiva dalla visualizzazione del precedente
+  tabsContent.forEach(tab => tab.classList.remove('operations__content--active'))
+  // Aggiungere la visualizzazione dell'area del contenuto a quella cliccata
+  document.querySelector(`.operations__content--${clicked.dataset.tab}`).classList.add('operations__content--active')
+})
+
+
+//#endregion
+
+
 //#region Trash
 /* h1.addEventListener('mouseenter', (e) => {
   e.preventDefault()
@@ -110,5 +138,20 @@ h1.onmouseenter = (e) => {
   // Verifica
   alert("OnMouseEnter : Ottimo, stai leggendo l'H1 con On Mouse Enter")
 } */
+
+// Downwards
+// console.log(h1.childNodes);
+// console.log(h1.childNodes);
+// console.log(h1.childNodes[0].textContent);
+// Upwards
+// console.log(h1.parentNode); // Prende il div
+// console.log(h1.parentElement); // Prende il div
+// Elemento più vicino
+// h1.closest('div').style.background = 'purple'
+// console.log(h1.children);
+// Primo span che trova
+// 1.firstElementChild.style.color = 'white'
+// Ultimo span che trova
+// h1.lastElementChild.style.color = 'purple'
 
 //#endregion 
