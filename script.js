@@ -190,7 +190,7 @@ headerObserver.observe(header)
 const revealSection = (entries, observer) => {
   const [entry] = entries
   // Verifica di Entry
-  console.log(entry);
+  // console.log(entry);
   // Se non ci sono già passato sopra un return vuoto
   if (!entry.isIntersecting) return
   // Altrimenti gli rimuovo la classe hidden
@@ -214,6 +214,43 @@ allSections.forEach((section) => {
 })
 
 //#endregion 
+
+//#region Lazy Loading Images
+// Seleziono tutte le immagini con attributi [data-src]
+const imgTargets = document.querySelectorAll('img[data-src]')
+console.log(imgTargets);
+
+// Funzione Callback
+const loadImg = (entries, observer) => {
+  // Eseguo destructuring
+  const [entry] = entries
+  console.log(entry);
+  if (!entry.isIntersecting) return
+
+  // Cambio del src immagine con data-src
+  entry.target.src = entry.target.dataset.src
+  // Scateno un evento al load
+  entry.target.addEventListener('load', () => {
+    // Rimuovo la classe lazy img
+    entry.target.classList.remove('lazy-img')
+  })
+  // Blocco l'observer
+  observer.unobserve(entry.target)
+}
+
+// Oggetto dell'observer
+const loadImgObj = {
+  root: null,
+  threshold: 0,
+  rootMargin: '200px'
+}
+// Creo un observer
+const imgObserver = new IntersectionObserver(loadImg, loadImgObj)
+// Eseguo loop su ogni singola immagine
+imgTargets.forEach(img => imgObserver.observe(img))
+
+
+//#endregion
 
 //#region Trash
 /* h1.addEventListener('mouseenter', (e) => {
