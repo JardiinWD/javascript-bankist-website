@@ -17,6 +17,7 @@ const tabs = document.querySelectorAll('.operations__tab')
 const tabsContainer = document.querySelector('.operations__tab-container')
 const tabsContent = document.querySelectorAll('.operations__content')
 const nav = document.querySelector('.nav')
+const allSections = document.querySelectorAll('.section')
 //#endregion
 
 //#region Functions
@@ -182,6 +183,37 @@ const headerObserver = new IntersectionObserver(stickyNav, stickyObject)
 headerObserver.observe(header)
 
 //#endregion
+
+//#region Reveal Sections
+
+// Seleziono tutte le sezioni
+const revealSection = (entries, observer) => {
+  const [entry] = entries
+  // Verifica di Entry
+  console.log(entry);
+  // Se non ci sono già passato sopra un return vuoto
+  if (!entry.isIntersecting) return
+  // Altrimenti gli rimuovo la classe hidden
+  entry.target.classList.remove('section--hidden')
+  // Quando non le vedo le sezioni non vergono più osservate
+  // Migliorano le performance
+  observer.unobserve(entry.target)
+}
+
+const revealSectionObj = {
+  root: null,
+  threshold: 0.15
+}
+
+const sectionObserver = new IntersectionObserver(revealSection, revealSectionObj)
+// Looping in tutte le sezioni
+allSections.forEach((section) => {
+  sectionObserver.observe(section)
+  // Inizialmente sono tutte nascoste da JS
+  section.classList.add('section--hidden')
+})
+
+//#endregion 
 
 //#region Trash
 /* h1.addEventListener('mouseenter', (e) => {
