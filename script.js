@@ -13,7 +13,10 @@ const btnScrollTo = document.querySelector('.btn--scroll-to')
 // Sezione 1
 const section1 = document.querySelector('#section--1')
 const h1 = document.querySelector('h1')
-
+const tabs = document.querySelectorAll('.operations__tab')
+const tabsContainer = document.querySelector('.operations__tab-container')
+const tabsContent = document.querySelectorAll('.operations__content')
+const nav = document.querySelector('.nav')
 //#endregion
 
 //#region Functions
@@ -99,9 +102,6 @@ document.addEventListener('keydown', function (e) {
 //#endregion 
 
 //#region Tabbed component
-const tabs = document.querySelectorAll('.operations__tab')
-const tabsContainer = document.querySelector('.operations__tab-container')
-const tabsContent = document.querySelectorAll('.operations__content')
 
 tabsContainer.addEventListener('click', (e) => {
   // closest in modo che clicchi sempre sul button principale
@@ -122,9 +122,66 @@ tabsContainer.addEventListener('click', (e) => {
   document.querySelector(`.operations__content--${clicked.dataset.tab}`).classList.add('operations__content--active')
 })
 
+//#endregion
+
+//#region Menu Fade Animation
+
+// Funzione per mouseover
+const handleHover = (e, opacity) => {
+  if (e.target.classList.contains('nav__link')) {
+    // Lascio il target a una costante
+    const link = e.target;
+    // Cerco i figli diretti
+    const siblings = link.closest('.nav').querySelectorAll('.nav__link')
+    // Cerco il logo
+    const logo = link.closest('.nav').querySelector('img')
+
+    // Avvio ciclo sui link all'over cambio di opacità
+    siblings.forEach(el => {
+      if (el !== link) el.style.opacity = opacity
+    })
+    logo.style.opacity = opacity
+  }
+}
+
+// Metodo 1 (Valido ma da migliorare)
+nav.addEventListener('mouseover', (e) => handleHover(e, 0.5))
+nav.addEventListener('mouseout', (e) => handleHover(e, 1))
+// Metodo 2 (Il meglio, usato con bind ma non funziona : / (cambia opacity con this))
+// nav.addEventListener('mouseover', handleHover.bind(0.5))
+// nav.addEventListener('mouseout', handleHover.bind(1))
 
 //#endregion
 
+//#region Sticky Navigation
+
+// console.log(initialCords);
+const header = document.querySelector('.header')
+// Prendo la proprietà di altezza della navbar per
+// aggiungere il rootMargin
+const navHeight = nav.getBoundingClientRect().height
+
+const stickyNav = (entries) => {
+  // Avvio un destructuring su Entries
+  const [entry] = entries
+  // console.log(entry);
+  if (!entry.isIntersecting) nav.classList.add('sticky')
+  else nav.classList.remove('sticky')
+}
+
+const stickyObject = {
+  root: null,
+  threshold: 0,
+  // Ora altezza è dinamica
+  rootMargin: `-${navHeight}px`
+}
+
+// Questo è l'API observer
+const headerObserver = new IntersectionObserver(stickyNav, stickyObject)
+// Questo è il metodo observer applicato all'header
+headerObserver.observe(header)
+
+//#endregion
 
 //#region Trash
 /* h1.addEventListener('mouseenter', (e) => {
