@@ -375,3 +375,12 @@ h1.onmouseenter = (e) => {
 // h1.lastElementChild.style.color = 'purple'
 
 //#endregion 
+
+//#region DOM Event
+document.addEventListener('DOMContentLoaded', (e) => {
+  console.log("HTML caricato tramite DOMContentLoaded", e);
+})
+
+window.addEventListener('load', (e) => {
+  console.log("HTML caricato tramite Load", e);
+})
