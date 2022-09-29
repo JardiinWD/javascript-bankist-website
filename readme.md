@@ -2,7 +2,7 @@
 
 This Web app simulates a landing page for the Bankist App. The application was created step by step following Jonas Schmedtmann's online bootcamp.
 
-![Screenshot App](./assets/img/Bankist-app.png)
+![Screenshot App](./img/Bankist-app.png)
 
 ## **Tag head**
 
